@@ -1,0 +1,67 @@
+{
+  "name": "@allscreenshots/sdk",
+  "version": "1.0.0",
+  "description": "Official TypeScript SDK for the Allscreenshots API - capture screenshots programmatically",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "lint": "eslint src tests",
+    "lint:fix": "eslint src tests --fix",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "allscreenshots",
+    "screenshot",
+    "api",
+    "sdk",
+    "typescript",
+    "web-capture",
+    "page-screenshot"
+  ],
+  "author": "Allscreenshots",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allscreenshots/allscreenshots-sdk-typescript.git"
+  },
+  "homepage": "https://allscreenshots.com",
+  "bugs": {
+    "url": "https://github.com/allscreenshots/allscreenshots-sdk-typescript/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.2",
+    "eslint": "^9.17.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.18.2",
+    "vitest": "^4.0.16"
+  }
+}

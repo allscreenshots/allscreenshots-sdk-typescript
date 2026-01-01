@@ -1,0 +1,54 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "schedule": [
+    "every monday"
+  ],
+  "timezone": "America/New_York",
+  "labels": ["dependencies"],
+  "rangeStrategy": "pin",
+  "packageRules": [
+    {
+      "description": "Group minor and patch updates together",
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "minor and patch dependencies",
+      "groupSlug": "minor-patch"
+    },
+    {
+      "description": "Automerge patch updates that pass CI",
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    },
+    {
+      "description": "Separate PRs for major version updates",
+      "matchUpdateTypes": ["major"],
+      "groupName": null,
+      "automerge": false
+    },
+    {
+      "description": "Group TypeScript and related packages",
+      "matchPackagePatterns": ["^typescript", "^@typescript-eslint"],
+      "groupName": "typescript packages"
+    },
+    {
+      "description": "Group ESLint packages",
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "eslint packages"
+    },
+    {
+      "description": "Group test packages",
+      "matchPackagePatterns": ["vitest", "@vitest"],
+      "groupName": "test packages"
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"]
+  },
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2
+}
