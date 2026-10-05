@@ -1,0 +1,28 @@
+{
+  "name": "@allscreenshots/sdk",
+  "version": "2.0.0",
+  "description": "OpenAPI client for @allscreenshots/sdk",
+  "author": "Allscreenshots <support@allscreenshots.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allscreenshots/allscreenshots-sdk-typescript.git"
+  },
+  "license": "Apache-2.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/esm/index.js",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "files": [
+    "dist",
+    "sdk-provenance.json",
+    "openapi.json"
+  ],
+  "homepage": "https://allscreenshots.com"
+}

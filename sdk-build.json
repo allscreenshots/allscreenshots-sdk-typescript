@@ -1,0 +1,19 @@
+{
+  "language": "typescript",
+  "build": [
+    [
+      "npm",
+      "ci",
+      "--ignore-scripts"
+    ],
+    [
+      "npm",
+      "run",
+      "build"
+    ]
+  ],
+  "run": [
+    "node",
+    "sample-app/worker.cjs"
+  ]
+}
