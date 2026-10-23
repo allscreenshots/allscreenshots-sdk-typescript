@@ -1,11 +1,25 @@
 {
   "name": "@allscreenshots/sdk",
   "version": "2.0.0",
-  "description": "OpenAPI client for @allscreenshots/sdk",
+  "description": "Official TypeScript/JavaScript SDK for the Allscreenshots screenshot API: capture websites, manage jobs, compose images, schedule captures, crawl sites, and read usage.",
+  "keywords": [
+    "allscreenshots",
+    "screenshot",
+    "screenshot-api",
+    "website-screenshot",
+    "web-capture",
+    "pdf",
+    "sdk",
+    "api-client",
+    "typescript"
+  ],
   "author": "Allscreenshots <support@allscreenshots.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/allscreenshots/allscreenshots-sdk-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/allscreenshots/allscreenshots-sdk-typescript/issues"
   },
   "license": "Apache-2.0",
   "main": "./dist/index.js",
@@ -24,5 +38,8 @@
     "sdk-provenance.json",
     "openapi.json"
   ],
-  "homepage": "https://allscreenshots.com"
+  "homepage": "https://allscreenshots.com",
+  "publishConfig": {
+    "access": "public"
+  }
 }
